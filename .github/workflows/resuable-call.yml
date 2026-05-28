@@ -5,3 +5,5 @@ on:
 jobs:
     call-reuable-workflow:
         uses: ./.github/workflows/reusable-workflow.yml
+        with:
+            name: 'Satya'
