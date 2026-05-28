@@ -1,9 +1,14 @@
 name: calling reusable workflow
 on:
-  push:
+  workflow_dispatch: 
+    inputs:
+      name:
+        description: Provide the name of the person
+        required: true
+        type: string
 
 jobs:
     call-reuable-workflow:
         uses: ./.github/workflows/reusable-workflow.yml
         with:
-            name: 'Satya'
+            name: ${{ inputs.name }}
